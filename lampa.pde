@@ -40,12 +40,13 @@ void draw() {
   
   if (mousePressed){
    lampa_on=true;
-    if(abs(250-kapcsolox)<50 && abs(200-kapcsoloy)<50){
+    if(abs(250-mouseX)<sugar && abs(200-mouseY)<sugar){
     // allitsd be a lampa szinet, legyen attetszo
     
     }
     else{
-    fill(#030303);
+      lampa_on=false;
+    noFill();
     }
   
     // ha az ONOFF gombon kattintott, 
@@ -60,11 +61,31 @@ void draw() {
  
   if (lampa_on) {
      // allitsd be a lampa szinet, legyen attetszo
-    color c = color(#F0EDBF);   //áttetszóség
+    color c = color(#F0EDBF,70);   //áttetszóség
 fill(c);
   }
     triangle(250, -130, -50, 500, 550, 500);
   }
-  
+  if (mousePressed){
+  lampa_on=true;
+  if(abs(400-mouseX)<sugar && abs(400-mouseY)<sugar) {
+  fill(#FF5F5F,70);
+  triangle(250, -130, -50, 500, 550, 500);
+  }
+  }
+  if (mousePressed){
+  lampa_on=true;
+  if(abs(100-mouseX)<sugar && abs(400-mouseY)<sugar) {
+  fill(#6FFF5A,70);
+  triangle(250, -130, -50, 500, 550, 500);
+  }
+  }
+   if (mousePressed){
+  lampa_on=true;
+  if(abs(250-mouseX)<sugar && abs(400-mouseY)<sugar) {
+  fill(#405EFF,70);
+  triangle(250, -130, -50, 500, 550, 500);
+  }
+  }
   
 }
